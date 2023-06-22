@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <!-- Adicionando o botão para a imagem anterior -->
+            <!-- Adicionando o botão para a imagem anterior data-bs-slide mostra para onde trocar, anterior ou avançar -->
             <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
                 <span class="carousel-control-prev-icon"></span>
             </button>
@@ -107,15 +107,72 @@
             <!-- mostrando a quantidade de fotos que têm dentro do carrocel -->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                <!-- data-bs-slide-to mostra para qual slide do carousel trocar clicando no botão -->
                 <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
             </div>
     
         </div>
     </div>
+                    <!-- criando o menu dropdown, aquele que clica e se abre  -->
+
+        <div class="container">
+            <div class="btn-group"> <!--btn-group pode juntar botões diferentes e fazer com que pareçam um só-->
+                <button class="btn btn-primary "> <!--adicionando dropdown-toggle e "data-bs-toggle="dropdown" faz com que o botão abra-->
+                    Cadastrar
+                </button>
+                <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li class="dropdown-item">
+                        <a href="#">Novo Usuário</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Novo fornecedor</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Novo funcionario</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- MODAL ou POP-UPS com BOOTSTRAP -->
+
+        <div class="container">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exemplo-modal"> <!--data-bs-target seleciona o elemento que vai ser usado -->
+                Abrir MODAL
+            </button>
+            <div class="modal" id="exemplo-modal" data-bs-backdrop="static"> <!--data-bs-backdrop="static" bloqueia a saída do pop-up-->
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Título da modal</h5>
+                            <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur laudantium laborum odit assumenda at voluptatibus, magnam officia voluptas fugit, enim architecto, eos ipsam explicabo. Perferendis aut delectus error vero libero.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <h5>Rodapé da modal</h5>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">confirmar</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
 
 
 
     <script src="./lib/bootstrap.bundle.min.js"></script>
+    <!-- <script> -->
+        <!-- //document.addEventListener('DOMContentLoaded', function(){ 
+            //const modalExemplo = new bootstrap.Modal('#exemplo-modal');
+            // modalExemplo.show(); faz com que o pop-up apareça na hora
+            //setTimeout(function() {
+              //  modalExemplo.show();
+            //}, 3000); //faz com que leve 3seg para aparecer o modal
+        //})
+    </script>-->
+
 </body>
 </html>
